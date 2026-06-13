@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Haroon Akhtar | Portfolio</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:linear-gradient(135deg,#0f172a,#1e293b);
+    color:white;
+    overflow-x:hidden;
+}
+
+/* Animated Background */
+body::before{
+    content:"";
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:
+    radial-gradient(circle,#38bdf844 1px,transparent 1px);
+    background-size:30px 30px;
+    animation:bgMove 15s linear infinite;
+    z-index:-1;
+}
+
+@keyframes bgMove{
+    from{
+        transform:translateY(0);
+    }
+    to{
+        transform:translateY(-120px);
+    }
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+    padding:40px;
+}
+
+.hero{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:50px;
+    flex-wrap:wrap;
+    min-height:100vh;
+}
+
+.profile-img{
+    width:300px;
+    height:300px;
+    border-radius:50%;
+    overflow:hidden;
+    border:5px solid #38bdf8;
+    animation:float 3s ease-in-out infinite;
+    box-shadow:0 0 40px #38bdf8;
+}
+
+.profile-img img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+@keyframes float{
+    0%,100%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-20px);
+    }
+}
+
+.info{
+    max-width:650px;
+}
+
+h1{
+    font-size:55px;
+    color:#38bdf8;
+}
+
+#typing{
+    margin-top:10px;
+    color:#cbd5e1;
+    font-size:28px;
+    min-height:40px;
+}
+
+p{
+    margin-top:15px;
+    line-height:1.8;
+    font-size:17px;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:20px;
+    margin-right:10px;
+    padding:12px 25px;
+    background:#38bdf8;
+    color:black;
+    text-decoration:none;
+    border-radius:30px;
+    font-weight:bold;
+    transition:.4s;
+    box-shadow:0 0 15px #38bdf8;
+}
+
+.btn:hover{
+    transform:translateY(-5px) scale(1.08);
+    box-shadow:0 0 30px #38bdf8;
+}
+
+.section{
+    margin-top:50px;
+    background:#1e293b;
+    padding:30px;
+    border-radius:15px;
+    transition:.4s;
+}
+
+.section:hover{
+    transform:translateY(-5px);
+}
+
+.section h2{
+    color:#38bdf8;
+    margin-bottom:15px;
+}
+
+ul li{
+    margin:10px 0;
+}
+
+footer{
+    text-align:center;
+    padding:30px;
+    margin-top:50px;
+    background:#020617;
+    color:#94a3b8;
+}
+
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<div class="hero">
+
+<div class="profile-img">
+<img src="Blue Modern P letter logo design template.png" alt="Haroon Akhtar">
+</div>
+
+<div class="info">
+
+<h1>Haroon Akhtar</h1>
+
+<h2 id="typing"></h2>
+
+<p>
+Data Science Student (2nd Semester), Front-End Developer,
+Canva Designer, AI Tools User, MS Office Expert,
+Photo Editor and Technology Enthusiast.
+</p>
+
+<a href="#contact" class="btn">Contact Me</a>
+
+<a href="https://wa.me/923369665491" class="btn">
+WhatsApp
+</a>
+
+</div>
+
+</div>
+
+<div class="section">
+<h2>Education</h2>
+
+<ul>
+<li>Data Science Student (2nd Semester)</li>
+<li>Matric (Medical)</li>
+<li>FSC General Knowledge</li>
+<li>Subjects: Computer, Economics, Statistics</li>
+</ul>
+
+</div>
+
+<div class="section">
+<h2>Certificates</h2>
+
+<ul>
+<li>English Language Course (3 Months)</li>
+<li>The EFL Course - The English Serai Naurang Campus</li>
+<li>6 Months Computer Course - Masrcom Computer Center Serai Gambila</li>
+</ul>
+
+</div>
+
+<div class="section">
+<h2>Skills</h2>
+
+<ul>
+<li>HTML & CSS</li>
+<li>Front-End Development</li>
+<li>Canva Designing</li>
+<li>MS Word</li>
+<li>PowerPoint</li>
+<li>Photo Editing</li>
+<li>AI Editing</li>
+<li>Basic Web Development</li>
+</ul>
+
+</div>
+
+<div class="section" id="contact">
+
+<h2>Contact Information</h2>
+
+<p>📱 WhatsApp: 0336-9656491</p>
+
+<p>📧 Email: haroondigital1@gmail.com</p>
+
+<a href="https://wa.me/923369665491" class="btn">
+Chat on WhatsApp
+</a>
+
+<a href="mailto:haroondigital1@gmail.com" class="btn">
+Send Email
+</a>
+
+</div>
+
+</div>
+
+<footer>
+© 2026 Haroon Akhtar | Data Science Student & Front-End Developer
+</footer>
+
+<script>
+
+const texts = [
+"Data Science Student",
+"Front-End Developer",
+"Canva Designer",
+"AI Enthusiast",
+"MS Office Expert"
+];
+
+let count = 0;
+let index = 0;
+let currentText = "";
+let letter = "";
+
+(function type(){
+
+if(count === texts.length){
+count = 0;
+}
+
+currentText = texts[count];
+letter = currentText.slice(0, ++index);
+
+document.getElementById("typing").textContent = letter;
+
+if(letter.length === currentText.length){
+
+count++;
+
+index = 0;
+
+setTimeout(type, 1500);
+
+}else{
+
+setTimeout(type, 100);
+
+}
+
+})();
+
+</script>
+
+</body>
+</html>
